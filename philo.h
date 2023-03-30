@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   philo.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tbaskhan <tbaskhan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/30 11:40:53 by tbaskhan          #+#    #+#             */
+/*   Updated: 2023/03/30 12:36:25 by tbaskhan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PHILO_H
 # define PHILO_H
 
@@ -75,4 +87,3 @@ void			print_end(t_state *state, int status);
 void			set_datas(t_state *state, t_philo *philo, int id);
 void			free_state(t_state *state);
 #endif
-

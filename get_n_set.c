@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_n_set.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tbaskhan <tbaskhan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/30 11:40:40 by tbaskhan          #+#    #+#             */
+/*   Updated: 2023/03/30 12:36:33 by tbaskhan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philo.h"
 
 int	get_alive(t_philo *philo, int status)
@@ -65,4 +77,3 @@ int	set_fork(t_philo *philo, int status)
 	pthread_mutex_unlock(&philo->mutex);
 	return (res);
 }
-

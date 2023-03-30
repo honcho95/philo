@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   routine.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tbaskhan <tbaskhan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/30 11:41:03 by tbaskhan          #+#    #+#             */
+/*   Updated: 2023/03/30 12:36:21 by tbaskhan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philo.h"
 
 static	int	eating(t_philo *philo)
@@ -22,6 +34,7 @@ static	int	sleep_n_think(t_philo *philo)
 	philo->sleep = true;
 	ft_usleep(philo, philo->datas->time_to_sleep);
 	philo->sleep = false;
+	usleep(1000);
 	print_infos(philo, 0);
 	philo->think = true;
 	return (1);
@@ -60,4 +73,3 @@ void	*routine(void *philo_tmp)
 	}
 	return (NULL);
 }
-

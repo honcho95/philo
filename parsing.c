@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parsing.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tbaskhan <tbaskhan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/30 11:40:50 by tbaskhan          #+#    #+#             */
+/*   Updated: 2023/03/30 12:36:30 by tbaskhan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philo.h"
 
 static void	error_parsing(int error, t_data *datas)
@@ -79,4 +91,3 @@ t_data	*parsing(int ac, char **av)
 		datas->nb_meals = -1;
 	return (datas);
 }
-

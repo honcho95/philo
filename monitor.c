@@ -1,6 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   monitor.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tbaskhan <tbaskhan@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/30 11:40:47 by tbaskhan          #+#    #+#             */
+/*   Updated: 2023/03/30 12:36:14 by tbaskhan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philo.h"
 
-//reset @ the end so the other philos can eat nb_meals times
 static void	get_meals(t_state *state, int i)
 {
 	int	tmp;
@@ -58,7 +69,7 @@ void	*check_alive(void *state_tmp)
 			i = 0;
 		get_meals(state, i);
 		if (state->done_eat >= state->datas->num_philo - 1
-				&& state->datas->nb_meals > 0)
+			&& state->datas->nb_meals > 0)
 			return (check_end(state, -1));
 		if (get_last_meal(&state->philos[i], 0)
 			+ state->datas->time_to_die < get_time(state->datas->start_time))
@@ -67,4 +78,3 @@ void	*check_alive(void *state_tmp)
 	}
 	return (NULL);
 }
-
